@@ -1,0 +1,13 @@
+.product-header {
+    position: relative;
+    padding: 0px;
+    margin: 0px 0px 20px 0px;
+    line-height: normal;
+    font-size: 20px;
+    color: #000000;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 3px;
+}
+
+
+

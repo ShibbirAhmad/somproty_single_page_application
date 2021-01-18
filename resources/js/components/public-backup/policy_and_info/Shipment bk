@@ -1,0 +1,79 @@
+<template>
+  <div >
+        <loading :active.sync="isLoading" :can-cancel="true" :is-full-page="fullPage"></loading>
+
+    <frontend-header></frontend-header>
+      <div class="row text-center">
+            <div :style="{
+                height: '300px',
+                marginTop: '-10px',
+                backgroundImage: 'url(/images/background.jpg)',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover'
+                }" class="background_image">
+               
+            </div>
+      </div>
+
+     <div class="row">
+            <div class="col-sm-12 col-md-12"> 
+              <div style="background-color:#eee" class="container-fluid ">
+                <div style="margin-top:20px;" class="container">   
+                  <div class="box bg-white shadow desc_info"> 
+                  <h4 style="padding:15px" class="heading" > <i class="fa fa-eye"></i><b> SHIPMENT POLICY</b>   </h4>    
+                     <p> How will the delivery be done?
+                       We process all deliveries through:  </p>  
+
+                      <p> • Reputed couriers </p>
+                       <p> • Our in house delivery team</p> 
+                       <p> How much are the delivery charges?</p>  
+                       <p> With in Dhaka city, delivery charge is BDT 45 and outside Dhaka city it is BDT 90. Note: If there is any modification in delivery charge for a particular item, it will be mentioned in Product details. What is the estimated delivery time? If your shipping address is within Dhaka city, products will be delivered by
+                            next business day or within 24 hours. If it is outside Dhaka then it will take 2-3 business days. </P> 
+                        <p>  <b> Note:</b> </p>   
+                        <p> • Any order placed after 6 pm will be considered as order of next business day, not as same day.</p>     
+                        <p> • Business Day: Saturday to Thursday  </p>      
+                        <p> Does eShoppingBD.com deliver internationally?</p>
+                        <p style="padding-bottom:20px;">  mohasagor.com doesn't deliver items internationally. You are more than welcome to make your 
+                            purchases on our site from anywhere in the world, but you'll have to 
+                            ensure the Delivery Address is within Bangladesh.</p>
+
+
+                 </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+          
+    <frontend-footer></frontend-footer>>
+  </div>
+</template>
+<script>
+import Loading from "vue-loading-overlay";
+import "vue-loading-overlay/dist/vue-loading.css";
+export default {
+  created(){
+
+    setTimeout(()=>{
+      this.isLoading=false;
+    },1000)
+  },
+  data(){
+    return {
+      isLoading: true,
+      fullPage: true,
+    }
+  },
+  components:{
+Loading
+  }
+}
+</script>
+
+<style >
+  .desc_info p {
+
+      padding:5px;
+      margin:10px;
+      padding-bottom:5px;
+  }
+</style>

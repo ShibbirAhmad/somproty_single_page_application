@@ -1,0 +1,352 @@
+li {
+    list-style: none;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+
+}
+
+.header-top {
+    width: 100%;
+    height: 29px;
+    display: flex;
+    background: #F7F8FA;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.header-top-left {
+    display: flex;
+    list-style: none;
+}
+
+.header-top li {
+    padding: 5px 4px;
+    font-size: 14px;
+}
+
+.flex {
+    display: flex;
+}
+
+.header-top-right {
+    margin-left: auto;
+    display: flex;
+}
+
+.header-top li span {
+    padding-right: 9px;
+    padding: 3px;
+}
+
+.header-top li i {
+    color: #FF4D03;
+}
+
+.main-header  {
+  background: #fff;
+}
+
+.main-header li {
+    padding: 5px 4px;
+    font-size: 14px;
+}
+
+img.site-logo {
+    max-width: 180px;
+    max-height: 60px;
+}
+
+.search-input {
+    width: 600px;
+    height: 35px;
+    border-radius: 5px;
+    transition: .5s;
+    background-color: #F7F8FA;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    top: 30%;
+}
+
+
+.search-btn {
+    height: 35px;
+    border-radius: 5px;
+    transition: .5s;
+    background-color: #F7F8FA;
+    border: 1px solid #ddd;
+    border: none;
+    right: 9px;
+    background: #ff4d03;
+    color: #fff;
+    width: 64px;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+}
+
+
+.main-header-left {
+    display: flex;
+}
+
+.main-header-right {
+    display: flex;
+    margin-left: auto;
+    padding: 13px;
+}
+
+
+.main-header-right li {
+
+    font-size: 28px;
+    padding: 10px 12px;
+}
+
+.main-header-right li i {
+    color: #ff4d03;
+
+}
+
+.menu {
+    position: relative;
+    width: 100%;
+}
+
+.menu-list {
+    width: 100%;
+    position: relative;
+    background: #ff4d03;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: .5s;
+   
+}
+
+
+.menu-item-link {
+    color: #fff;
+    transition: .3s;
+}
+
+.menu-item-link:hover {
+    color: #fff;
+
+}
+
+.menu-icon {
+    display: none;
+}
+
+.sub-item-list {
+    display: flex;
+    width: 90%;
+    min-height: 400px;
+    height: auto;
+    position: absolute;
+    background: #fff;
+    left: 5%;
+    flex-direction: row;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 1px 0px 1px 1px #eee;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 600px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    z-index: 99999999999;
+    margin-top: 7px;
+}
+
+.menu-item:hover>.sub-item-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-item {
+    width: 200px;
+    min-height: 220px;
+    margin-top: 10px;
+
+}
+.sub-item-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 15px;
+}
+.sub-item-link:hover {
+    color: #ff4d03;
+
+}
+.sub-sub-item {
+    text-transform: none;
+    padding: 3px 0px !important;
+   
+}
+.sub-sub-item-link {
+    color: #000000;
+    font-size: 14px;
+    transition: .5s;
+}
+.sub-sub-item-link:hover {
+    color: #ff4d03;
+}
+.sub-sub-item-list {
+
+    padding: 0px 15px;
+    margin-top: 5px;
+}
+
+#toggle-menu{
+    display: none;
+}
+ .sub-menu-icon {
+     display: none;
+ }
+
+
+
+/* =========START THE  MENU RESPONISVE CSS======== */
+
+@media only screen and (max-width: 900px) {
+
+  
+    .header-top {
+        display: none;
+    }
+    #toggle-menu {
+        display: block;
+        position: absolute;
+        left: 2%;
+        font-size: 30px
+    }
+    img.site-logo {
+     
+        position: absolute;
+        left: 28%;
+      top: -16%;
+    }
+    .main-header-left {
+      
+      width: 100%;
+        position: absolute;
+        z-index: 999999999;
+        background: #F7F8FA;
+        justify-content: center;
+        position: absolute;
+        height: 45px;
+    }
+    .main-header-right {
+
+            z-index: 99999999999;
+            top: -10%;
+            position: absolute;
+            right: 0;
+    }
+    .menu-item:hover>.sub-item-list {
+        opacity: 1;
+        visibility: visible;
+    }
+    /* =========MAIN MENU DIFFRENT STYLE IN  RESPONSIVE VIEW======== */
+    .menu-list {
+        display:flex;
+        flex-direction: column;
+        width: 250px;
+        background: #000;
+        min-height: 600px;
+        visibility: hidden;
+        opacity: 0;
+        transition: .2s;
+        justify-content: left !important;
+        height: 100vh;
+        position: fixed;
+        z-index: 99999999999999999;
+        top: 45px;
+     }
+     .collapse-manu{
+         visibility: visible;
+         opacity: 1;
+     }
+     .menu-overlaw {
+         position: fixed;
+         width: 100%;
+         height: 100vh;
+         background: rgb(0, 0, 0, 0.5);
+         top: 0;
+         z-index: 9;
+        
+     }
+     .search-btn{
+         display: none;
+     }
+     .menu-item {
+         padding: 10px 0px;
+         display: flex;
+      }
+   
+    .menu-icon{
+         display: block;
+         color: #fff;
+
+         justify-content: space-between;
+         margin-left: auto;
+         font-size: 17px;
+         margin-right: 10px;
+    }
+    .main-header {
+        height: 120px;
+    }
+    .search-input{
+        width: 70%;
+        left: 15%;
+        margin-top: 50px;
+    }
+
+      .sub-item-list {
+          display: none;
+          flex-direction: column;
+          width: 220px;
+          min-height: auto !important;
+          background: #272424;
+          opacity: 1;
+          visibility: visible;
+          box-shadow: none;
+          flex-direction: column;
+          overflow-x: hidden;
+          margin-left: -106px;
+          position: relative;
+          margin-top: 35px;
+      }
+
+      .sub-item {
+          width: auto;
+          min-height: auto;
+          font-weight: normal;
+          text-transform: none;
+          padding: 8px 0px !important;
+         
+        }
+      .sub-item-link{
+          color: #fff;
+      }
+      .sub-menu-icon{
+          display: block;
+      }
+       
+}
+
+/* =========FOR ICON ROTATE======== */
+.rotate {
+    transform: rotate(180deg);
+}
